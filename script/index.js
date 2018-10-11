@@ -32,10 +32,10 @@ const jokes = [
     "Did you hear about the kidnapping at school? It’s fine, he woke up.",
     "What do you call a cow with no legs? Ground beef."
 ];
-// let index = 0;
-
-
 // 3. Pull text from an array of text to write to the page.
+let index = 0;
+
+
 // == *1  function hello 
 // function hello() {
 //     console.log('Hello addEventListener!');
@@ -45,9 +45,10 @@ const jokes = [
 // - a function that says what to do when the event happens
 // Using the ananomous function below 
 triggerElement1.addEventListener('click', function () {
-    console.log('quote-addEventListener invoked');
+    console.log('addEventListener invoked');
     // const newFortune = quotes.pop();
-    const newQuote = quotes[Math.floor(Math.random() * quotes.length -1)];
+    const newQuote = quotes [Math.floor(Math.random() * quotes.length -1)];
+    // const newQuote = quotes[index];
     outputElement.textContent = newQuote;
     // index++;
     // if (index > quotes.length -1) {
@@ -55,8 +56,9 @@ triggerElement1.addEventListener('click', function () {
     // }
 });
 
-triggerElement2.addEventListener('click', function () {
-    console.log('joke-addEventListener invoked');
+triggerElement2.appendChild('click', function () {
+    console.log('addEventListener invoked');
+    // const newJoke = jokes[index];
     const newJoke = jokes[Math.floor(Math.random() * jokes.length -1)];
     outputJokeElement.textContent = newJoke;
     // index++;
