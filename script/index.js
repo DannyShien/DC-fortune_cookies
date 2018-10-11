@@ -1,4 +1,4 @@
-console.log('yep, its here');
+console.log('You\'re in it!');
 // Classes are for CSS Styling
 // 'Data Attributes' are for JS
 
@@ -32,7 +32,7 @@ const jokes = [
     "Did you hear about the kidnapping at school? It’s fine, he woke up.",
     "What do you call a cow with no legs? Ground beef."
 ];
-let index = 0;
+// let index = 0;
 
 
 // 3. Pull text from an array of text to write to the page.
@@ -45,24 +45,24 @@ let index = 0;
 // - a function that says what to do when the event happens
 // Using the ananomous function below 
 triggerElement1.addEventListener('click', function () {
-    console.log('addEventListener invoked');
+    console.log('quote-addEventListener invoked');
     // const newFortune = quotes.pop();
-    const newQuote = quotes[index];
+    const newQuote = quotes[Math.floor(Math.random() * quotes.length -1)];
     outputElement.textContent = newQuote;
-    index++;
-    if (index > quotes.length -1) {
-        index = 0;
-    }
+    // index++;
+    // if (index > quotes.length -1) {
+    //     index = 0;
+    // }
 });
 
 triggerElement2.addEventListener('click', function () {
-    console.log('addEventListener invoked');
-    const newJoke = jokes[index];
+    console.log('joke-addEventListener invoked');
+    const newJoke = jokes[Math.floor(Math.random() * jokes.length -1)];
     outputJokeElement.textContent = newJoke;
-    index++;
-    if (index > jokes.length -1) {
-        index = 0;
-    }
+    // index++;
+    // if (index > jokes.length -1) {
+    //     index = 0;
+    // }
 });
 // *1 use the function hello here
 // triggerElement.addEventListener('click', hello); -one way to implement a function
